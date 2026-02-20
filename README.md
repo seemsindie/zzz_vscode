@@ -33,7 +33,7 @@ ln -s "$(pwd)" ~/.vscode/extensions/zzz-templates
 npm install -g @vscode/vsce
 
 # Package the extension
-cd zzz-vscode
+cd zzz_vscode
 vsce package
 
 # Install the .vsix file
