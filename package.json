@@ -1,14 +1,41 @@
 {
   "name": "pidgn-templates",
   "displayName": "Pidgn Templates",
-  "description": "Syntax highlighting for Pidgn template files (.html.pidgn)",
-  "version": "0.3.0",
+  "description": "Syntax highlighting, snippets, and language support for Pidgn framework templates (.html.pidgn) — variables, conditionals, loops, partials, layouts, pipes, and i18n.",
+  "version": "0.3.1",
   "publisher": "pidgn-framework",
+  "icon": "icon.png",
+  "license": "MIT",
+  "author": {
+    "name": "Ivan Stamenkovic"
+  },
+  "homepage": "https://pidgn.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seemsindie/pidgn_vscode"
+  },
+  "bugs": {
+    "url": "https://github.com/seemsindie/pidgn_vscode/issues"
+  },
+  "keywords": [
+    "pidgn",
+    "template",
+    "handlebars",
+    "mustache",
+    "zig",
+    "web framework",
+    "i18n"
+  ],
+  "galleryBanner": {
+    "color": "#F4BB44",
+    "theme": "dark"
+  },
   "engines": {
     "vscode": "^1.75.0"
   },
   "categories": [
-    "Programming Languages"
+    "Programming Languages",
+    "Snippets"
   ],
   "contributes": {
     "languages": [
@@ -35,6 +62,12 @@
           "source.js": "javascript",
           "source.css": "css"
         }
+      }
+    ],
+    "snippets": [
+      {
+        "language": "pidgn",
+        "path": "./snippets/pidgn.json"
       }
     ]
   }

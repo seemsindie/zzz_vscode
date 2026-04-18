@@ -1,0 +1,166 @@
+{
+  "Variable": {
+    "prefix": "var",
+    "body": "{{${1:field}}}$0",
+    "description": "HTML-escaped variable interpolation"
+  },
+  "Raw variable": {
+    "prefix": "raw",
+    "body": "{{{${1:field}}}}$0",
+    "description": "Variable interpolation without HTML escaping"
+  },
+  "If block": {
+    "prefix": "if",
+    "body": [
+      "{{#if ${1:condition}}}",
+      "\t$0",
+      "{{/if}}"
+    ],
+    "description": "Conditional block"
+  },
+  "If / else block": {
+    "prefix": "ifelse",
+    "body": [
+      "{{#if ${1:condition}}}",
+      "\t$2",
+      "{{else}}",
+      "\t$0",
+      "{{/if}}"
+    ],
+    "description": "Conditional block with else branch"
+  },
+  "Each loop": {
+    "prefix": "each",
+    "body": [
+      "{{#each ${1:items}}}",
+      "\t$0",
+      "{{/each}}"
+    ],
+    "description": "Iterate over a collection"
+  },
+  "With block": {
+    "prefix": "with",
+    "body": [
+      "{{#with ${1:object}}}",
+      "\t$0",
+      "{{/with}}"
+    ],
+    "description": "Scope block bound to a sub-object"
+  },
+  "Partial": {
+    "prefix": "partial",
+    "body": "{{> ${1:partial_name}}}$0",
+    "description": "Include a partial template"
+  },
+  "Partial with args": {
+    "prefix": "partialargs",
+    "body": "{{> ${1:partial_name} ${2:name}=\"${3:value}\"}}$0",
+    "description": "Include a partial with arguments"
+  },
+  "Comment": {
+    "prefix": "comment",
+    "body": "{{! ${1:comment} }}$0",
+    "description": "Template comment (not emitted)"
+  },
+  "Yield (default)": {
+    "prefix": "yield",
+    "body": "{{{yield}}}$0",
+    "description": "Default yield slot in a layout"
+  },
+  "Yield (named)": {
+    "prefix": "yieldnamed",
+    "body": "{{{yield_${1:name}}}}$0",
+    "description": "Named yield slot in a layout"
+  },
+  "Raw block": {
+    "prefix": "rawblock",
+    "body": [
+      "{{{{raw}}}}",
+      "\t$0",
+      "{{{{/raw}}}}"
+    ],
+    "description": "Raw block — content passes through without processing"
+  },
+  "Translate (lookup)": {
+    "prefix": "t",
+    "body": "{{\"${1:key}\" | t}}$0",
+    "description": "Translate a static key via the t pipe"
+  },
+  "Translate (dynamic key)": {
+    "prefix": "tdyn",
+    "body": "{{${1:key_field} | t}}$0",
+    "description": "Translate a key held in a data field"
+  },
+  "Translate (plural)": {
+    "prefix": "tn",
+    "body": "{{${1:count} | tn:\"${2:key}\"}}$0",
+    "description": "Plural translation; input is count, arg is the key"
+  },
+  "Pipe: upper": {
+    "prefix": "upper",
+    "body": "{{${1:field} | upper}}$0",
+    "description": "Uppercase pipe"
+  },
+  "Pipe: lower": {
+    "prefix": "lower",
+    "body": "{{${1:field} | lower}}$0",
+    "description": "Lowercase pipe"
+  },
+  "Pipe: truncate": {
+    "prefix": "truncate",
+    "body": "{{${1:field} | truncate:${2:50}}}$0",
+    "description": "Truncate to N characters with ellipsis"
+  },
+  "Pipe: default": {
+    "prefix": "default",
+    "body": "{{${1:field} | default:\"${2:fallback}\"}}$0",
+    "description": "Fallback for empty values"
+  },
+  "Pipe: pluralize": {
+    "prefix": "pluralize",
+    "body": "{{${1:count} | pluralize:\"${2:item}\":\"${3:items}\"}}$0",
+    "description": "Pluralize with singular/plural forms"
+  },
+  "Pipe: format_date": {
+    "prefix": "formatdate",
+    "body": "{{${1:timestamp} | format_date:\"${2:YYYY-MM-DD}\"}}$0",
+    "description": "Format a Unix timestamp"
+  },
+  "Flash alert (success)": {
+    "prefix": "flash-success",
+    "body": [
+      "{{#if flash_success}}",
+      "\t<div class=\"alert alert-success\">{{flash_success}}</div>",
+      "{{/if}}",
+      "$0"
+    ],
+    "description": "Render the success flash message if present"
+  },
+  "Flash alert (error)": {
+    "prefix": "flash-error",
+    "body": [
+      "{{#if flash_error}}",
+      "\t<div class=\"alert alert-error\">{{flash_error}}</div>",
+      "{{/if}}",
+      "$0"
+    ],
+    "description": "Render the error flash message if present"
+  },
+  "CSRF hidden field": {
+    "prefix": "csrf",
+    "body": "<input type=\"hidden\" name=\"_csrf_token\" value=\"{{csrf_token}}\">$0",
+    "description": "CSRF token field for POST forms"
+  },
+  "Pagination nav": {
+    "prefix": "pagination",
+    "body": [
+      "<nav class=\"pagination\">",
+      "\t{{#if has_prev}}<a href=\"?page={{prev_page}}\">Previous</a>{{/if}}",
+      "\t<span>Page {{page}} of {{total_pages}}</span>",
+      "\t{{#if has_next}}<a href=\"?page={{next_page}}\">Next</a>{{/if}}",
+      "</nav>",
+      "$0"
+    ],
+    "description": "Pagination navigation block"
+  }
+}
