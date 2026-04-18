@@ -70,6 +70,7 @@
       },
       "patterns": [
         { "include": "#pidgn-pipe" },
+        { "include": "#pidgn-literal-key" },
         { "include": "#pidgn-field-path" }
       ]
     },
@@ -115,8 +116,14 @@
       },
       "patterns": [
         { "include": "#pidgn-pipe" },
+        { "include": "#pidgn-literal-key" },
         { "include": "#pidgn-field-path" }
       ]
+    },
+    "pidgn-literal-key": {
+      "comment": "Quoted-string path in pipes like {{\"greet\" | t}}",
+      "name": "string.quoted.double.literal-key.pidgn",
+      "match": "\"[^\"]*\""
     },
     "pidgn-pipe": {
       "patterns": [
@@ -126,7 +133,7 @@
         },
         {
           "name": "support.function.pipe.pidgn",
-          "match": "(?<=\\|\\s*)(truncate|upper|lower|default|pluralize)(?=\\s*[:\\|\\}]|\\s*$)"
+          "match": "(?<=\\|\\s*)(truncate|upper|lower|default|pluralize|format_date|t|tn)(?=\\s*[:\\|\\}]|\\s*$)"
         },
         {
           "name": "constant.numeric.pipe-arg.pidgn",
