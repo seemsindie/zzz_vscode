@@ -3,7 +3,7 @@
   "displayName": "Pidgn Templates",
   "description": "Syntax highlighting, snippets, and language support for Pidgn framework templates (.html.pidgn) — variables, conditionals, loops, partials, layouts, pipes, and i18n.",
   "version": "0.3.1",
-  "publisher": "pidgn-framework",
+  "publisher": "Pidgn",
   "icon": "icon.png",
   "license": "MIT",
   "author": {

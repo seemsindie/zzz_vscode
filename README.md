@@ -48,7 +48,7 @@ Type the prefix in a `.html.pidgn` file and press `Tab`.
 Search for **Pidgn Templates** in the VS Code Extensions panel, or:
 
 ```
-ext install pidgn-framework.pidgn-templates
+ext install Pidgn.pidgn-templates
 ```
 
 ### Local development (symlink)
