@@ -2,6 +2,8 @@
 
 Syntax highlighting, snippets, and language support for [pidgn](https://pidgn.dev) template files in VS Code.
 
+[![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/Pidgn.pidgn-templates?label=VS%20Marketplace)](https://marketplace.visualstudio.com/items?itemName=Pidgn.pidgn-templates)
+[![Installs](https://img.shields.io/visual-studio-marketplace/i/Pidgn.pidgn-templates)](https://marketplace.visualstudio.com/items?itemName=Pidgn.pidgn-templates)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ## Features
